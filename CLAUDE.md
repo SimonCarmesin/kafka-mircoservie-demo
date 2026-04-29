@@ -59,12 +59,35 @@ Infrastructure in the repo root:
 
 ## Default issue workflow
 When asked to work on an issue, follow this sequence unless explicitly told otherwise:
-1. Analyze the issue and affected services.
-2. Propose a short implementation plan.
-3. Implement the change in the smallest clean way.
-4. Run or describe verification steps.
-5. Prepare a PR summary.
-   Only skip a step if the user explicitly asks to.
+1. Read the GitHub issue.
+2. Analyze the affected services, topics, configs, and Docker setup.
+3. Propose a short implementation plan.
+4. After approval, create a feature branch.
+5. Implement the change.
+6. Review the diff and create clear commits.
+7. Push the branch.
+8. Create a GitHub pull request with a complete summary.
+9. Only merge when explicitly requested by the user.
+
+## Git workflow rules
+- Never commit directly to `main`.
+- For every implementation task, create a dedicated feature branch first.
+- Use branch names based on the issue or feature, for example:
+    - `feat/analytics-service`
+    - `feat/frontend-bookings`
+    - `fix/<short-description>`
+- After implementation:
+    1. review changed files
+    2. create clear commits
+    3. push the branch
+    4. create a GitHub pull request
+- Pull request descriptions must summarize:
+    - what changed
+    - which services were affected
+    - which Kafka topics or event flows were affected
+    - how the change can be tested
+- If working from a GitHub issue, reference the issue in the PR description.
+- Documentation for changes should live in the repository history and GitHub pull requests, not only in terminal output.
 
 ## Coding preferences
 - Prefer simple and readable Kotlin over clever abstractions.
