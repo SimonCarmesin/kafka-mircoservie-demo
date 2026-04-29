@@ -57,13 +57,14 @@ Infrastructure in the repo root:
 - When changing ports, environment variables, or service dependencies, update Docker Compose as part of the same change.
 - Prefer solutions that work both locally and in Docker where reasonable.
 
-## Change workflow
-When working on an issue or feature:
-1. First understand the existing architecture and identify affected services.
-2. Propose a short implementation plan before large changes.
-3. Make the smallest useful change that solves the issue cleanly.
-4. Keep changes scoped to the relevant service(s).
-5. Summarize what changed, why, and how to test it.
+## Default issue workflow
+When asked to work on an issue, follow this sequence unless explicitly told otherwise:
+1. Analyze the issue and affected services.
+2. Propose a short implementation plan.
+3. Implement the change in the smallest clean way.
+4. Run or describe verification steps.
+5. Prepare a PR summary.
+   Only skip a step if the user explicitly asks to.
 
 ## Coding preferences
 - Prefer simple and readable Kotlin over clever abstractions.
