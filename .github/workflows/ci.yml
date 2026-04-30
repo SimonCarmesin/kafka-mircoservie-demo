@@ -34,7 +34,7 @@ jobs:
 
       - name: Build and test
         working-directory: ${{ matrix.service }}
-        run: gradle clean test --no-daemon
+        run: gradle clean build --no-daemon
 
   validate-compose:
     name: Validate Docker Compose

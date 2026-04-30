@@ -4,7 +4,28 @@
       "mcp__github__list_issues",
       "mcp__github__get_me",
       "mcp__github__search_repositories",
-      "mcp__github__issue_read"
+      "mcp__github__issue_read",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "mcp__github__create_pull_request",
+      "Skill(update-config)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "docker compose up --build -d",
+            "timeout": 300,
+            "statusMessage": "Rebuilding local Docker environment in background...",
+            "async": true
+          }
+        ]
+      }
     ]
   }
 }
